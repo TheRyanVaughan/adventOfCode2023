@@ -2,23 +2,12 @@ package main
 
 import (
 	"aoc2023/utils"
-	"log"
 	"strconv"
 	"strings"
 )
 
-const sampleFileName = "day4/sample.txt"
-const inputFileName = "day4/input.txt"
-
 func main() {
-	lines := utils.ReadTextFromFileToStringSlice(sampleFileName)
-
-	parsed_input := parse(lines)
-
-	log.Println("Part 1: ", solvePart1(parsed_input))
-	log.Println("Part 2: ", solvePart2(parsed_input))
-
-	utils.SolveWith(4, solvePart1, solvePart2, parse)
+	utils.SolveWith(4, solvePart1, solvePart2, parse, true)
 }
 
 type numMap map[int]bool

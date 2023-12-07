@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"strconv"
 )
 
 func ReadTextFromFileToStringSlice(fileName string) []string {
@@ -44,4 +45,12 @@ func SolveWith[T any, V any](day int, solvePart1 func([]T) V, solvePart2 func([]
 
 func NoParse(input []string) []string {
 	return input
+}
+
+func Atoi(s string) int64 {
+	x, err := strconv.ParseInt(s, 10, 64)
+	if err != nil {
+		panic(err)
+	}
+	return x
 }
