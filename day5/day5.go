@@ -142,5 +142,4 @@ func solvePart2(lines input) int64 {
 	// conversely, the inverse mapping b -> a should work identically
 	// b - bRangeStart := diff, which means adding diff to aRangeStart ought to give a.
 
-	return minKey
 }
